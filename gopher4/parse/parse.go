@@ -35,10 +35,6 @@ func Parse(r io.Reader) ([]Link, error) {
 		links = append(links, link)
 	}
 
-	for _, link := range links {
-
-		fmt.Printf("Link: %+v\n", link)
-	}
 	return links, nil
 
 }

@@ -1,0 +1,4 @@
+github.com/bradleyyma/gophercise/gopher4 v0.0.0-20250628235054-a7c0d5512c5b h1:XYaLgg434gss5eyKnsXs7ILJivH+K16lyAIfITwoVDY=
+github.com/bradleyyma/gophercise/gopher4 v0.0.0-20250628235054-a7c0d5512c5b/go.mod h1:n9tHOmpw99DvZAHmrwTYFAH2jUbXC9v0/DxahygU598=
+golang.org/x/net v0.41.0 h1:vBTly1HeNPEn3wtREYfy4GZ/NECgw2Cnl+nK6Nz3uvw=
+golang.org/x/net v0.41.0/go.mod h1:B/K4NNqkfmg07DQYrbwvSluqCJOOXwUjeb/5lOisjbA=
