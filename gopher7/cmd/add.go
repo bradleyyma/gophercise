@@ -6,6 +6,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/bradleyyma/gophercise/gopher7/internal/task"
 	"github.com/spf13/cobra"
 )
 
@@ -18,8 +19,9 @@ var addCmd = &cobra.Command{
 			fmt.Println("Too many arguments. Please provide a single task description.")
 			return
 		}
-		task := args[0]
-		fmt.Printf("Added task: %s\n", task)
+		task_name := args[0]
+		task.Add(task_name)
+		fmt.Printf("Added task: %s\n", task_name)
 	},
 }
 

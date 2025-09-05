@@ -17,13 +17,15 @@ var completeCmd = &cobra.Command{
 	Short: "Complete a task from the task manager",
 
 	Run: func(cmd *cobra.Command, args []string) {
+		tasks := task.GetAll()
 		for _, arg := range args {
 			id, err := strconv.Atoi(arg)
-			if err != nil || id < 1 {
+			if err != nil || id < 1 || id > len(tasks) {
 				fmt.Printf("Skipping invalid task ID: %s\n", arg)
 				continue
 			}
-			task.Do(id)
+			task.Do(tasks[id-1])
+			fmt.Printf("Completed task: %s\n", tasks[id-1])
 		}
 	},
 }

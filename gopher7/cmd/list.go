@@ -6,6 +6,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/bradleyyma/gophercise/gopher7/internal/task"
 	"github.com/spf13/cobra"
 )
 
@@ -15,7 +16,11 @@ var listCmd = &cobra.Command{
 	Short: "List all tasks currently stored in the task manager",
 
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("list called")
+		fmt.Println("Tasks:")
+		tasks := task.GetAll()
+		for i, task := range tasks {
+			fmt.Printf("%d. %s\n", i+1, task)
+		}
 	},
 }
 
