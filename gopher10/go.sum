@@ -1,0 +1,4 @@
+github.com/bradleyyma/gophercise/gopher9 v0.0.0-20250921000231-5b5336c937dc h1:bnSjzwYTmZWlyYJEFiEs91iUea1UJZ36g4B0euSoTVg=
+github.com/bradleyyma/gophercise/gopher9 v0.0.0-20250921000231-5b5336c937dc/go.mod h1:J7B0xP5eK6Boi6fZGgvoAfimesoj99iLBrtJPjBmM/s=
+golang.org/x/exp v0.0.0-20250911091902-df9299821621 h1:2id6c1/gto0kaHYyrixvknJ8tUK/Qs5IsmBtrc+FtgU=
+golang.org/x/exp v0.0.0-20250911091902-df9299821621/go.mod h1:TwQYMMnGpvZyc+JpB/UAuTNIsVJifOlSkrZkhcvpVUk=

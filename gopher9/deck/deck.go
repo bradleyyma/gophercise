@@ -2,10 +2,9 @@ package deck
 
 import (
 	"fmt"
+	"math/rand/v2"
 	"sort"
 	"time"
-
-	"golang.org/x/exp/rand"
 )
 
 //go:generate stringer -type=Suit,Rank
@@ -92,7 +91,7 @@ func absRank(c Card) int {
 	return int(c.Suit)*int(maxRank) + int(c.Rank)
 }
 
-var shuffleRand = rand.New(rand.NewSource(uint64(time.Now().Unix())))
+var shuffleRand = rand.New(rand.NewPCG(uint64(time.Now().Unix()), uint64(time.Now().UnixNano())))
 
 func Shuffle(cards []Card) []Card {
 	ret := make([]Card, len(cards))

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"golang.org/x/exp/rand"
+	"math/rand/v2"
 )
 
 func ExampleCard() {
@@ -78,10 +78,10 @@ func TestDeck(t *testing.T) {
 }
 
 func TestShuffle(t *testing.T) {
-	shuffleRand = rand.New(rand.NewSource(0))
+	shuffleRand = rand.New(rand.NewPCG(0, 0))
 	orig := New()
-	first := orig[44]
-	second := orig[23]
+	first := orig[12]
+	second := orig[44]
 	cards := New(Shuffle)
 	if cards[0] != first {
 		t.Errorf("Expected first card to be %s, got %s", first, cards[0])
